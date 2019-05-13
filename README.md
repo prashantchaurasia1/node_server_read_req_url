@@ -12,3 +12,9 @@ mkdir node_basic_server
 cd node_basic_server
 
 npm init
+
+# Now run, index.js file using command:
+
+node index
+
+# Insert url: localhost:3000 in chrome
