@@ -1,5 +1,5 @@
 {
-  "name": "node_basic_server",
+  "name": "node_server_read_req_url",
   "version": "1.0.0",
   "description": "Basic dependency json file",
   "main": "index.js",
