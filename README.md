@@ -8,5 +8,7 @@ Install node.js and npm
 # Run following commands for creating basic node server
 
 mkdir node_basic_server
+
 cd node_basic_server
+
 npm init
