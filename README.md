@@ -17,4 +17,4 @@ npm init
 
 node index
 
-# Insert url: localhost:3000 in chrome
+# Open index.html file in chrome
