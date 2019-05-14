@@ -11,7 +11,7 @@ const server = http.createServer( ( req, res ) => {
     // to get url without '/'
     const urlPath = _url.pathname; 
     
-    // url without '/'  
+    // url without '/' using javaScript default functions
     const urlPathExact = urlPath.substring( 1, urlPath.length );
     
     // handling for favicon
