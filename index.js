@@ -2,24 +2,29 @@ const http = require("http");
 const url = require('url');
 const port = 3000;
 
+const _teleSchedule = {
+    'Friends': 'Sun Mon @7',
+    'Narcos' : 'Mon @7',
+    'Vice' : 'Tue @7',
+    'Theory' : 'Wed @7',
+    'Video' : 'Fri @7'
+}
 // create a server object
 const server = http.createServer( ( req, res ) => {
 
     // provides URL object with each part of the address as properties
     let _url = url.parse(req.url, true);
-    
+
     // to get url without '/'
     const urlPath = _url.pathname; 
-    
-    // url without '/' using javaScript default functions
     const urlPathExact = urlPath.substring( 1, urlPath.length );
-    
+
     // handling for favicon
     if( urlPathExact === 'favicon.ico' ){
         res.writeHead(204, {'Content-Type': 'image/x-icon'} );
     }else {
         res.writeHead(200, {'Content-Type': 'text/html'} );
-        res.write( "Web Series liked is "+ urlPathExact );
+        res.write( "Web Series liked is "+ urlPathExact + " which will show on television on " + _teleSchedule[urlPathExact] );
     }
     res.end();
 });
@@ -28,7 +33,7 @@ const server = http.createServer( ( req, res ) => {
 server.on('error', (err) => {
     console.log(err);
 });
- 
+
 // run node index command and then run localhost:3000 in web browser to see server
 server.listen(port);
 
